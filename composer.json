@@ -1,0 +1,22 @@
+{
+    "name": "basar911/php-util",
+    "description": "php functions util",
+    "keywords": ["php", "util"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Liu Yun",
+            "email": "523094696@qq.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "basar911\\phpUtil\\": "src/"
+        }
+    }
+}
