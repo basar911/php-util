@@ -74,7 +74,7 @@ class Arr
      * @param bool $preserve_keys 分块后是否保留原有键名，否则每个分块重新从0索引
      * @return void
      */
-    public static function chunk(array $array, int $num, ?Closure $func = null, bool $preserve_keys = false)
+    public static function chunk(array $array, int $num, $func = null, bool $preserve_keys = false)
     {
         $chunks = array_chunk($array, $num, $preserve_keys);
 
@@ -529,7 +529,7 @@ class Arr
      * @param Closure|null $extra_func  额外的处理闭包
      * @return array
      */
-    public static function multi_join_one($multi_array, $multi_join, $one_array, $one_join, ?Closure $extra_func = null)
+    public static function multi_join_one($multi_array, $multi_join, $one_array, $one_join, $extra_func = null)
     {
         $one_array = array_column($one_array, null, $one_join);
 
@@ -563,7 +563,7 @@ class Arr
      * @param Closure|null $extra_func  额外的处理闭包
      * @return array
      */
-    public static function one_join_multi($one_array, $one_join, $multi_array, $multi_join, string $list_key = 'list', ?Closure $extra_func = null)
+    public static function one_join_multi($one_array, $one_join, $multi_array, $multi_join, string $list_key = 'list', $extra_func = null)
     {
         $multi_array = self::group_by($multi_array, $multi_join);
 
@@ -590,7 +590,7 @@ class Arr
      * @param string $find_field 关联后连接的从表字段
      * @return mixed
      */
-    public static function find_inset_join(array $find_array, string $find_join, array $set_array, string $set_join, string $find_field = '', ?Closure $extra_func = null, array $separate = [',', ';'], string $join_key = 'find_field_content')
+    public static function find_inset_join(array $find_array, string $find_join, array $set_array, string $set_join, string $find_field = '', $extra_func = null, array $separate = [',', ';'], string $join_key = 'find_field_content')
     {
         $set_array = array_column($set_array, null, $set_join);
 
@@ -628,7 +628,7 @@ class Arr
      * @param Closure|null $func
      * @return array
      */
-    public static function join_one_by_multi_field(array &$list, array $list_fields, array $join_list, array $join_fields, ?Closure $func = null)
+    public static function join_one_by_multi_field(array &$list, array $list_fields, array $join_list, array $join_fields, $func = null)
     {
         $map = self::multi_key_format($join_list, $join_fields);
 
@@ -658,7 +658,7 @@ class Arr
      * @param Closure|null $func
      * @return array
      */
-    public static function join_multi_by_multi_field(array &$list, array $list_fields, array $join_list, array $join_fields, string $list_name = 'list', ?Closure $func = null)
+    public static function join_multi_by_multi_field(array &$list, array $list_fields, array $join_list, array $join_fields, string $list_name = 'list', $func = null)
     {
         $map = self::group_by($join_list, ...$join_fields);
 
@@ -1194,7 +1194,7 @@ class Arr
      * @param string|null $target 多维键名指向的目标字段，null则指向整条row
      * @return mixed|null
      */
-    public static function multi_key_format(array $array, array $fields, ?string $target = null) {
+    public static function multi_key_format(array $array, array $fields, $target = null) {
         $result = [];
 
         foreach ($array as $row) {

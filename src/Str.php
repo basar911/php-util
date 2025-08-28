@@ -150,7 +150,7 @@ class Str
      * @param string|null $encoding
      * @return array
      */
-    public static function mb_split(string $string, int $split_length = 1, ?string $encoding = null)
+    public static function mb_split(string $string, int $split_length = 1, $encoding = null)
     {
         if (!is_null($encoding)) {
             mb_internal_encoding($encoding);
@@ -178,7 +178,7 @@ class Str
      * @param string|null $encoding 字符串编码，默认uft-8
      * @return array|string[]
      */
-    public static function mb_width_split(string $string, int $font_size, int $split_width, ?string $encoding = null)
+    public static function mb_width_split(string $string, int $font_size, int $split_width, $encoding = null)
     {
         if (!is_null($encoding)) {
             mb_internal_encoding($encoding);

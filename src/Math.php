@@ -208,7 +208,7 @@ class Math
      * @param float|null $comp_l  传入了该参数，则返回距离与该参数值的比较结果，1-大于 0-等于  -1-小于
      * @return float|int
      */
-    public static function point_distance(array $a, array $b, ?int $comp_l = null, $scale = 10){
+    public static function point_distance(array $a, array $b, $comp_l = null, $scale = 10){
         $x_len = pow($a[0] - $b[0], 2);
         $y_len = pow($a[1] - $b[1], 2);
 
