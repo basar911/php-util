@@ -6,6 +6,7 @@ namespace basar911\phpUtil;
 // 公共函数
 class Utils
 {
+
     /**
      * 经典的概率算法，抽盲盒
      * $proArr是一个预先设置的数组，
