@@ -10,7 +10,8 @@
             "email": "523094696@qq.com"
         }
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "require": {
         "php": ">=7.0",
         "ext-bcmath": "*"
